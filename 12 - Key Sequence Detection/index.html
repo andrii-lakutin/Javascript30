@@ -9,14 +9,11 @@
 <script>
 	const pressed = [];
 	const secretCode = 'seen';
-	const secretCode2 = 'довж';
-	const secretCode3 = 'владушка';
-	const secretCode4 = 'владам';
 
 	window.addEventListener('keyup', (e) => {
 		pressed.push(e.key);
 		//array will remember only 6 items
-		pressed.splice(-secretCode3.length - 1, pressed.length - secretCode3.length);
+		pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
 		if (pressed.join('').includes(secretCode)
 			|| pressed.join('').includes(secretCode2)
 			|| pressed.join('').includes(secretCode3)
